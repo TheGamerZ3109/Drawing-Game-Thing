@@ -14,11 +14,18 @@ game.Players.PlayerAdded:Connect(function(player)
 	gameData.Name = "leaderstats"
 	gameData.Parent = player
 	
-	local coins = Instance.new("IntValue")
-	coins.Name = "Coins"
-	coins.Parent = gameData	
+	local Points = Instance.new("IntValue")
+	Points.Name = "Points"
+	Points.Parent = gameData
 	
 	loadModule.loadData(player, MainDataStore, Http)
+
+    --other stuff thats needed
+
+    local canDraw = Instance.new("BoolValue")
+    canDraw.Name = "canDraw"
+    canDraw.Parent = player
+    canDraw.Value = false
 end)
 
 game.Players.PlayerRemoving:Connect(function(plr)
