@@ -4,8 +4,8 @@ local DTS = game:GetService("DataStoreService")
 local Http = game:GetService("HttpService")
 local MainDataStore = DTS:GetDataStore("LeaderstatsDataStore")
 
-local saveModule = require(script.SaveData)
-local loadModule = require(script.LoadData)
+local saveModule = require(script.Parent.SaveData)
+local loadModule = require(script.Parent.LoadData)
 
 
 
